@@ -14,7 +14,7 @@
 | **Database** | MongoDB + Mongoose |
 | **Environment Management** | dotenv |
 | **Authentication** | JWT (JSON Web Token) |
-| **Deployment** | Render / Railway / Vercel / Cyclic |
+| **Deployment** | Render |
 
 ---
 
