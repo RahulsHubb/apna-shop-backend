@@ -39,7 +39,7 @@ apna-shop-backend/
 
 ### 1️⃣ Clone the Repository
 ```bash
-git clone https://github.com/YourUsername/apna-shop-backend.git
+git clone https://github.com/RahulsHubb/apna-shop-backend.git
 cd apna-shop-backend
 
 npm install
