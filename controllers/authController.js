@@ -27,6 +27,7 @@ export const registerUser = async (req, res) => {
         const salt = await bcrypt.genSalt(10);
         const hashedPassword = await bcrypt.hash(password, salt);
 
+
         //check if user already exists
         const userExists = await User.findOne({ email });
         if (userExists) {
@@ -34,9 +35,12 @@ export const registerUser = async (req, res) => {
         }
 
         const newUser = await User.create({ name, email, password: hashedPassword });
+        const token = jwt.sign({ id: newUser._id }, process.env.JWT_SECRET, { expiresIn: "7d" });
 
         res.status(201).json({
             success: true,
+            code: 201,
+            token,
             message: "User created successfully!",
             user: newUser,
         });
